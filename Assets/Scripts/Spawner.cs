@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
         
         Bounds bounds = spawnArea.bounds;
 
-        // สุ่มตำแหน่งภายในขอบเขตของ box
+        
         float xPos = Random.Range(bounds.min.x, bounds.max.x);
         float yPos = Random.Range(bounds.min.y, bounds.max.y);
 

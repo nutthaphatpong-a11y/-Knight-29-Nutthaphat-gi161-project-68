@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy_Movement : MonoBehaviour
 {
@@ -8,6 +8,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private Rigidbody2D rb;
     public Transform player;
+    public Animator anim;
 
     void Start()
     {
@@ -16,18 +17,31 @@ public class Enemy_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isChasing == true)
+
+        if (isChasing && player != null)
         {
-            if (player.position.x > transform.position.x && facingDirection == -1 ||
-                player.position.x < transform.position.x && facingDirection == 1)
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.linearVelocity = direction * Speed;
+
+            
+            anim.SetFloat("horizontal", Mathf.Abs(direction.x));
+            anim.SetFloat("vertical", Mathf.Abs(direction.y));
+
+            
+            if ((player.position.x > transform.position.x && facingDirection == -1) ||
+                (player.position.x < transform.position.x && facingDirection == 1))
             {
                 Flip();
             }
-
-            Vector2 direction = (player.position - transform.position).normalized;
-            rb.linearVelocity = direction * Speed;
         }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
 
+            
+            anim.SetFloat("horizontal", 0);
+            anim.SetFloat("vertical", 0);
+        }
     }
 
     void Flip()
