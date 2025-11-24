@@ -948,7 +948,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &680321799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8191,6 +8191,7 @@ GameObject:
   - component: {fileID: 1434906593}
   - component: {fileID: 1434906598}
   - component: {fileID: 1434906599}
+  - component: {fileID: 1434906600}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8214,6 +8215,7 @@ MonoBehaviour:
   facingDirection: 1
   rb: {fileID: 1434906594}
   anim: {fileID: 1434906598}
+  playerCombar: {fileID: 1434906600}
 --- !u!50 &1434906594
 Rigidbody2D:
   serializedVersion: 5
@@ -8385,6 +8387,19 @@ MonoBehaviour:
   currentHealth: 5
   maxHealth: 10
   healthText: {fileID: 2006187736}
+--- !u!114 &1434906600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434906592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5efca85e9d9e547ad289b98e08dfc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1434906598}
 --- !u!1 &1559924063
 GameObject:
   m_ObjectHideFlags: 0

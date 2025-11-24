@@ -9,6 +9,16 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
 
+    public PlayerCombar playerCombar;
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Slash"))
+        {
+            playerCombar.Attack();
+        }
+    }
+
     void Start()
     {
         
