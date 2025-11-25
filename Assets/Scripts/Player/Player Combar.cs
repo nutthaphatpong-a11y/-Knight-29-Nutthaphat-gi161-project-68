@@ -14,6 +14,7 @@ public class PlayerCombar : MonoBehaviour
     public Transform attackPoint;
     public int Exp = 0;
     public int maxExp = 1;
+    public int levelPlayer = 1;
 
     private void Update()
     {
@@ -42,7 +43,9 @@ public class PlayerCombar : MonoBehaviour
         {
             Exp = 0;
             maxExp++;
-            Damage = 5;
+            levelPlayer++;
+            Damage++;
+            Debug.Log("Player Level " + levelPlayer );
         }
     }
 
