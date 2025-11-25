@@ -1,11 +1,11 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int currentHealth = 5;
-    public int maxHealth = 10;
-
+    public int currentHealth;
+    public int maxHealth;
     public TMP_Text healthText;
 
     private void Start()
@@ -18,8 +18,9 @@ public class PlayerHealth : MonoBehaviour
         healthText.text = "HP : " + currentHealth + " / " + maxHealth;
 
         if (currentHealth <= 0) 
-        { 
+        {
             gameObject.SetActive(false);
         }
     }
+
 }
