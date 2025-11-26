@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
     public TMP_Text healthText;
+    public int Coin = 0;
 
 
     public PlayerMovement movement { get; private set; }
@@ -74,5 +75,25 @@ public class Player : MonoBehaviour
     {
         currentHealth += value;
         healthText.text = $"HP : {currentHealth} / {maxHealth}";
+        Debug.Log("You get health : " + currentHealth);
     }
+
+    public void putonLongSword(int value)
+    {
+        baseDamage += value;
+        Debug.Log( "You have equipped a long sword. Damage : " + baseDamage);
+    }
+
+    public void AddCoin(int value)
+    {
+        Coin += value;
+        Debug.Log("Coin : " + Coin);
+    }
+
+    public void PlusExp(int value)
+    {
+        exp += value;
+        Debug.Log("Get ExpStar Exp + : " + value);
+    }
+
 }

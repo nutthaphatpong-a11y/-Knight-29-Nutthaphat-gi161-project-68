@@ -10,8 +10,6 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-       
-
         spawnTime = spawnCooldown;
     }
 
@@ -28,8 +26,6 @@ public class Spawner : MonoBehaviour
     void Spawn()
     {
 
-
-        
         Bounds bounds = spawnArea.bounds;
 
         

@@ -2,7 +2,7 @@
 
 public class PlayerCombat : MonoBehaviour
 {
-    private Player player; // รับ Player มา
+    private Player player; 
 
     public Animator anim;
     public float Cooldown = 2;
@@ -35,7 +35,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (attackPoint == null)
         {
-            Debug.LogError("❌ AttackPoint is NOT assigned in PlayerCombat!");
+            Debug.LogError("");
             return;
         }
 
@@ -51,7 +51,7 @@ public class PlayerCombat : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("⚠ Enemy hit doesn't have Enemy_Health component!");
+                Debug.LogWarning("");
             }
         }
     }

@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class Heart : item
+public class Longsword : item
 {
     public override void Use(Player player)
     {
         if (player)
         {
-            player.Heal(ItemValue);
+            player.putonLongSword(ItemValue);
             Destroy(this.gameObject);
         }
     }
-
 }

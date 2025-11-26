@@ -267,3 +267,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 5
+  player: {fileID: 0}
+  dropItemsPrefabs:
+  - {fileID: 6503371130149179948, guid: b3724b33d8b59f546aa4131b88298389, type: 3}
+  - {fileID: 6038876614600550642, guid: 5681f870d8b8b1a44b91dc336bfe5f5c, type: 3}
+  - {fileID: 282563011770288422, guid: 84d5d20437e09694db3ba592a51a6d9d, type: 3}
+  - {fileID: 4552590335001582044, guid: 3f206feebce40bb43825a73f3383c518, type: 3}
