@@ -8,7 +8,7 @@ public class Enamy_Attark : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+            collision.gameObject.GetComponent<Player>().ChangeHealth(-damage);
         }
     }
 }

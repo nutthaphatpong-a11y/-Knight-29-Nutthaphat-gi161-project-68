@@ -1,15 +1,15 @@
-using UnityEditor.Tilemaps;
+﻿using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f;
-    public int facingDirection = 1; 
+    public int facingDirection = 1;
 
     public Rigidbody2D rb;
     public Animator anim;
 
-    public PlayerCombar playerCombar;
+    public PlayerCombat playerCombar;
 
     private void Update()
     {
@@ -21,10 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
-    
+
     void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("horizontal", Mathf.Abs(horizontal));
         anim.SetFloat("vertical", Mathf.Abs(vertical));
 
-        if(horizontal > 0 && transform.localScale.x < 0 || 
+        if (horizontal > 0 && transform.localScale.x < 0 ||
             horizontal < 0 && transform.localScale.x > 0)
         {
             Flip();

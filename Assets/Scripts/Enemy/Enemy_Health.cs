@@ -5,12 +5,12 @@ public class Enemy_Health : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth;
-    private PlayerCombar playerCombat;
+    private Player player;
 
     private void Start()
     {
         currentHealth = maxHealth;
-        playerCombat = GameObject.FindWithTag("Player").GetComponent<PlayerCombar>();
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
         
     }
 
@@ -22,9 +22,9 @@ public class Enemy_Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        else if (currentHealth <= 0 && playerCombat != null)
+        else if (currentHealth <= 0 && player != null)
         {
-                playerCombat.LevelUP();
+            player.AddExp(1);
 
 
             Destroy(gameObject);
