@@ -5,7 +5,7 @@ public class PlayerCombat : MonoBehaviour
     private Player player; 
 
     public Animator anim;
-    public float Cooldown = 2;
+    public float Cooldown = 1;
     private float timer;
     public float weaponRange = 1;
     public LayerMask enemyLayer;

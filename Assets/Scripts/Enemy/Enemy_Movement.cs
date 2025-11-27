@@ -23,11 +23,11 @@ public class Enemy_Movement : MonoBehaviour
             Vector2 direction = (player.position - transform.position).normalized;
             rb.linearVelocity = direction * Speed;
 
-            
+
             anim.SetFloat("horizontal", Mathf.Abs(direction.x));
             anim.SetFloat("vertical", Mathf.Abs(direction.y));
 
-            
+
             if ((player.position.x > transform.position.x && facingDirection == -1) ||
                 (player.position.x < transform.position.x && facingDirection == 1))
             {
@@ -38,7 +38,7 @@ public class Enemy_Movement : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero;
 
-            
+
             anim.SetFloat("horizontal", 0);
             anim.SetFloat("vertical", 0);
         }
@@ -54,7 +54,7 @@ public class Enemy_Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (player == null) 
+            if (player == null)
             {
                 player = collision.transform;
             }

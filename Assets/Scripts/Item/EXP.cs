@@ -6,8 +6,10 @@ public class EXP : item
     {
         if (player)
         {
-            player.PlusExp(ItemValue);
+            //player.PlusExp(ItemValue);
+            player.AddExp(ItemValue);
             Destroy(this.gameObject);
+            
         }
     }
 }
