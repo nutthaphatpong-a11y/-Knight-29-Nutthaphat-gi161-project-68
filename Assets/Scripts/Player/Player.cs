@@ -39,9 +39,10 @@ public class Player : MonoBehaviour
             level++;
             maxExp = (level * 2);
             baseDamage++;
+            currentHealth = currentHealth + level;
             maxHealth = maxHealth + (level * 2);
             healthText.text = $"HP : {currentHealth} / {maxHealth}";
-
+            UpdateHealthUI();
             Debug.Log($"🎉 Level UP! to {level}, Damage : {baseDamage}");
         }
     }
